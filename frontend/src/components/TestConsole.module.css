@@ -1,0 +1,286 @@
+.consoleContainer {
+  background-color: #0f172a;
+  border-top: 1px solid #334155;
+  display: flex;
+  flex-direction: column;
+  color: #f8fafc;
+  font-family: inherit;
+  transition: max-height 0.3s ease;
+  z-index: 15;
+}
+
+.expanded {
+  max-height: 260px;
+}
+
+.collapsed {
+  max-height: 44px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  background-color: #1e293b;
+  border-bottom: 1px solid #334155;
+  user-select: none;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: #f8fafc;
+}
+
+.summaryBadge {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.badgeSuccess {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.badgeFail {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.3);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.runBtn,
+.submitBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.runBtn {
+  background-color: #334155;
+  color: #f8fafc;
+}
+
+.runBtn:hover:not(:disabled) {
+  background-color: #475569;
+}
+
+.submitBtn {
+  background-color: #10b981;
+  color: white;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: #059669;
+}
+
+.runBtn:disabled,
+.submitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.body {
+  padding: 0.75rem 1rem;
+  overflow-y: auto;
+  min-height: 160px;
+  max-height: 200px;
+}
+
+.loadingState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  height: 120px;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 0.85rem;
+  height: 120px;
+}
+
+.emptyState strong {
+  color: #94a3b8;
+  margin: 0 0.3rem;
+}
+
+.resultsLayout {
+  display: flex;
+  gap: 1rem;
+}
+
+.tabsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 110px;
+  border-right: 1px solid #1e293b;
+  padding-right: 0.5rem;
+}
+
+.tabBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.5rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.35rem;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+}
+
+.tabBtn:hover {
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+.tabActive {
+  background-color: #1e293b;
+  border-color: #334155;
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.passIcon {
+  color: #34d399;
+}
+
+.failIcon {
+  color: #f87171;
+}
+
+.details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+}
+
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.textPass {
+  color: #34d399;
+}
+
+.textFail {
+  color: #f87171;
+}
+
+.timeLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+.dataBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.dataBlock label {
+  font-size: 0.72rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dataBlock pre {
+  margin: 0;
+  padding: 0.4rem 0.6rem;
+  background-color: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 0.35rem;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #e2e8f0;
+  white-space: pre-wrap;
+}
+
+.outputPass {
+  color: #34d399 !important;
+}
+
+.outputFail {
+  color: #f87171 !important;
+}
+
+.errorBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.errorBlock label {
+  font-size: 0.72rem;
+  color: #f87171;
+  text-transform: uppercase;
+}
+
+.errorBlock pre {
+  margin: 0;
+  padding: 0.4rem 0.6rem;
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  border-radius: 0.35rem;
+  font-family: monospace;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+}

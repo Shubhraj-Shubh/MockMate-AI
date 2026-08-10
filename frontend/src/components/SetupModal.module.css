@@ -1,0 +1,369 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1.5rem;
+}
+
+.modalCard {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  max-width: 680px;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  color: #f8fafc;
+  animation: slideUp 0.3s ease-out;
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 1rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(96, 165, 250, 0.25);
+}
+
+.header h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  color: #f8fafc;
+}
+
+.header p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.inputGroup label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  color: #f8fafc;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  border-color: #3b82f6;
+}
+
+.langSelector {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.langBtn {
+  flex: 1;
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.langBtn:hover {
+  background-color: #1e293b;
+  border-color: #64748b;
+}
+
+.langActive {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: #3b82f6;
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.trackGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.trackCard {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 0.65rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.trackCard:hover {
+  border-color: #64748b;
+  transform: translateY(-2px);
+}
+
+.trackSelected {
+  border-color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.08);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.2);
+}
+
+.trackHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.trackTag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  border: 1px solid;
+}
+
+.checkIcon {
+  color: #3b82f6;
+}
+
+.trackCard h4 {
+  font-size: 0.95rem;
+  margin: 0 0 0.35rem 0;
+  color: #f1f5f9;
+}
+
+.trackCard p {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.startBtn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.85rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.startBtn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.startBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* CV Management Section */
+.cvCard {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-image: linear-gradient(135deg, rgba(168, 85, 247, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+}
+
+.cvHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cvInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cvIconBox {
+  width: 38px;
+  height: 38px;
+  border-radius: 0.5rem;
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cvDetails h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #f1f5f9;
+}
+
+.cvMeta {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.cvBadge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.15);
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.cvActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cvActionBtn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.2s ease;
+}
+
+.cvActionBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.cvDropzone {
+  border: 2px dashed #475569;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgba(15, 23, 42, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cvDropzone:hover {
+  border-color: #a855f7;
+  background: rgba(168, 85, 247, 0.04);
+}
+
+.dropzoneTitle {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #f1f5f9;
+}
+
+.dropzoneSub {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.cvProjectsPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+}
+
+.cvProjectPill {
+  font-size: 0.7rem;
+  background: rgba(168, 85, 247, 0.15);
+  color: #d8b4fe;
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(168, 85, 247, 0.25);
+}
