@@ -220,7 +220,7 @@ Visit **`http://localhost:5173`** in your browser!
 
 ---
 
-## 🐳 Docker Deployment
+## 🐳 Containerized Local Execution (Docker)
 
 To build and run the multi-language production container (with Python, C++, Java, and Node.js compilers pre-installed):
 
@@ -264,3 +264,7 @@ For an in-depth 5-page architectural breakdown, state machine logic, and securit
 ## 📜 License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+
+---
+*Verified local production build & technical architecture documentation updated as of September 2026.*
